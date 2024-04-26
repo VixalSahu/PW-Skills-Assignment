@@ -1,0 +1,92 @@
+RDBMS Assignment
+Q1. What is RDBMS? Why do industries use RDBMS?
+Ans: RDBMS stands for Relational Database Management System. It refers to a type of software system that is used to manage relational databases.RDBMS or Relational Database Management System is simply Relational Database and a Management system. As DBMS it is a complete software that allows us to store and manipulate some relational data.
+Let’s now look at a basic outline of why industries use RDBMSG Let’s consider a banking application and understand this better
+1. Supports transactions.
+In RDBMS, a transaction is simply a set of operations that are done on the data in the database. These transactions are done completely only if all the conditions are met, if any condition is not satisfied the transaction would not be completed.
+2. Relationships.
+Industrial applications the majority of the time work with data that has relationships. Since there is a need of managing this relational data, industries go for RDBMS.
+3. Proper Schema.
+Schema is the blueprint of the database. In most industrial applications the schema almost remains unchanged over time.
+Let’s consider a banking application, in the KYC process same information would be collected by all the users and stored in the database.
+Q2. Explain the relationship data model in depth.
+Ans: Relationship data model by the name itself conveys that it can be applied for data with relationships and represents the relationship between data entities.
+Looking at the history of the relationship data model was introduced by Edgar F. Codd in 1969, and is now the most widely used data model in modern databases:
+The relationship data model focuses on two things
+1. Tables.
+2. Relationships.
+The relationship data model focuses on the structure and organization of tables and the relationships between them. This is done to accurately represent the relationships and dependencies between different entities.
+Q3. What is the importance of Relationships in a Database management system? Explain the types of relationships.
+Ans: Importance of Relationships in RDBMS.
+The concept of relationships in RDBMS is inspired by daily life human relationships. If you ask a group of people, what’s their view on relationships, is it good or bad? Some say relationships are good and some say bad based on their experience. Along with this there also exists a group of people who answer diplomatically telling relationships can sometimes be good or bad, it varies from person to person.
+This question is quite controversial, and it is very hard to arrive at a conclusion. Most of the time, we agree upon the fact that relationships can sometimes be good or bad, and they varied person to person. This might not be true for all. 
+Types of Relationships.
+1. one-to-one relationship.
+2. one-to-many relationship.
+3. many-to-one relationship.
+4. many-to-many relationship.
+Q4. Explain the different types of Keys in RDBMS considering a real-life scenario.
+Ans: The term Keys in RDBMS does not refer to any type of secret which will open a locck. But, they are very important in helping us organize and manage databases.
+A key in RDBMS is a column or a group of columns that uniquely identifies a row in a table. Keys are mainly used to identify records and establish relationships between different tables.
+Super Key
+Candidate Key
+Primary Key
+Foreign Key
+Arlternate Key
+Composite Key
+Artificial key
+Q5. Write a short note on Single Responsibility Principle.
+Ans: The Single Responsibility Principle (SRP) in Relational Database Management Systems (RDBMS) refers to the concept that each database table should have a single responsibility or purpose.
+To put it in simple words it is always preferable to have data related to a single entity in one table. The above-shown table contains information of three entities namely student, course, and instructor which is not a good practice and doesn’t follow the single responsibility principle. The best practice is to store data of different entities in different tables and establish a relationship between them.
+Q6. Explain the different types of errors that could arise in a denormalized database.
+Ans: Denormalization is a technique used by database administrators to optimize the efficiency of their database infrastructure. This method allows us to add redundant data into a normalized database to alleviate issues with database queries that merge data from several tables into a single table. The denormalization concept is based on the definition of normalization that is defined as arranging a database into tables correctly for a particular purpose.
+Reduced Data Integrity: By adding redundant data, denormalization can reduce data integrity and increase the risk of inconsistencies.
+Increased Complexity: While denormalization can simplify the database schema in some cases, it can also increase complexity by introducing redundant data.
+Increased Storage Requirements: By adding redundant data, denormalization can increase storage requirements and increase the cost of maintaining the database.
+Q7. What is normalization and what is the need for normalization?
+Ans: Normalization is the process of reducing data redundancy in a table and improving data integrity. Then why do you need it? If there is no normalization in SQL, there will be many problems, such as:
+Insert Anomaly: This happens when we cannot insert data into the table without another.
+Update Anomaly: This is due to data inconsistency caused by data redundancy and data update.
+Delete exception: Occurs when some attributes are lost due to the deletion of other attributes.
+So normalization is a way of organizing data in a database. Normalization involves organizing the columns and tables in the database to ensure that their dependencies are correctly implemented using database constraints. Normalization is the process of organizing data in a proper manner. It is used to minimize the duplication of various relationships in the database.
+There are many benefits to normalizing a database. Some of the main advantages are: 
+By using normalization redundancy of database or data duplication can be resolved.
+We can minimize null values by using normalization.
+Results in a more compact database (due to less data redundancy/zero).
+Minimize/avoid data modification problems.
+It simplifies the query.is
+The database structure is clearer and easier to understand.
+Q8. List out the different levels of Normalization and explain them in detail.
+Ans: 
+The First Normal Form – 1NF
+For a table to be in the first normal form, it must meet the following criteria:
+a single cell must not hold more than one value (atomicity)
+there must be a primary key for identification
+no duplicated rows or columns
+each column must have only one value for each row in the table
+The Second Normal Form – 2NF
+The 1NF only eliminates repeating groups, not redundancy. That’s why there is 2NF.
+A table is said to be in 2NF if it meets the following criteria:
+it’s already in 1NF
+has no partial dependency. That is, all non-key attributes are fully dependent on a primary key.
+The Third Normal Form – 3NF
+When a table is in 2NF, it eliminates repeating groups and redundancy, but it does not eliminate transitive partial dependency.
+This means a non-prime attribute (an attribute that is not part of the candidate’s key) is dependent on another non-prime attribute. This is what the third normal form (3NF) eliminates.
+So, for a table to be in 3NF, it must:
+be in 2NF
+have no transitive partial dependency.
+Q9. What are joins and why do we need them?
+Ans: We all understand that in an ecommerce company, the focus is to have as much sales as possible so thatcompany earns max profit.
+Suppose you want to understand/ fetch the data/report for customers in the age group of 25-30 years. Forexample, what is the amount of sales and what is the hottest item on sale today in this age group. In order to understand the data here,we will need the following:
+For age group data —> Customers table
+For sales data —> Sales table
+For hottest product on sale —> Products table
+In order to create any kind of report or to have an insight into data you always need to refer to multiple tables. This is done with the help of Joins.
+Hence, conclusively, join is a concept of combining data from multiple tables to give data to an end-user or to use it for some business requirements.
+Join is needed because the required data is almost always not present in a single table.
+Q10. Explain the different types of joins?
+Ans: Join are majorly categorized in four types.
+Inner Join: Inner join helps to get the data from left and right tables where data is present both left and right tables.
+Right Join: Right join takes everything present in the right table and also the data which is common in both table.
+Left Join: It takes everything present in the left table and also the data common in both tables.
+Full Join: It takes everything present in both tables, common data included.
